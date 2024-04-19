@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Admin</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        a {
+            text-decoration: none;
+            color: #007bff;
+        }
+
+        body {
+            background-image: url('https://signal.avg.com/hs-fs/hubfs/Blog_Content/Avg/Signal/AVG%20Signal%20Images/Is%20Bitcoin%20Safe%20-%20refresh%20(Signal)/Is-bitcoin-safe.png?width=1320&name=Is-bitcoin-safe.png'); /* Changed to tech-themed background */
+            background-repeat: no-repeat;
+            background-size: cover;
+			height: 100%;
+            background-position: center;
+            font-family: 'Arial', sans-serif;
+        }
+
+        button {
+            border: none;
+            cursor: pointer;
+            height: 45px;
+            width: 120px;
+            border-radius: 2em;
+            background-color: #007bff;
+            margin-top: 20px; /* Increased margin-top for better spacing */
+            color: #fff;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+
+        .mainForm {
+            padding: 130px 50px;
+        }
+
+        .logform {
+			border: 2px solid #000000;
+            text-align: center;
+            height: 370px;
+            width: 700px;
+            padding-top: 60px;
+            margin: auto;
+            background: #f2f2f2; /* Light gray background */
+            border-radius: 25px;
+            box-shadow: 0px 0px 15px rgba(67, 0, 0, 0.1); /* Added box shadow for depth */
+        }
+
+        input {
+            outline: none;
+            width: 45%;
+            height: 35px;
+            padding: 5px;
+            margin-bottom: 20px; /* Increased margin-bottom for better spacing */
+            border-radius: 5px; /* Slightly rounded corners */
+            border: 1px solid #ccc; /* Light gray border */
+        }
+
+        .inp,
+        h3 {
+            margin-bottom: 30px;
+        }
+
+        .resPage {
+            margin-top: 30px; /* Increased margin-top for better spacing */
+            margin-left: 10px;
+			font-weight: 800;
+			color: red;
+        }
+
+        label {
+            width: 120px;
+            display: inline-block; /* Added to align input fields and labels */
+            text-align: right; /* Align text to the right of labels */
+            margin-right: 10px; /* Space between label and input */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mainForm">
+        <form class="logform" action="/adminval" method="POST">
+            <h3>ADMIN LOGIN</h3>
+            <div class="inp">
+                <label>Username :</label>
+                <input type="text" name="username">
+            </div>
+            <div class="inp">
+                <label>Password :</label>
+                <input type="password" name="password">
+            </div>
+            <button type="submit">Login</button>
+            <div class="resPage">
+                <p>{{msg}}</p>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
